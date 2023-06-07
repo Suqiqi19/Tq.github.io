@@ -24,7 +24,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('|#countdown 3||某|某|祝|你|生|日|快|乐|#rectangle|');
+      S.UI.simulate('|#countdown 3||陶茜|生日快乐|Happy Birthday!|');
     }
 
     S.Drawing.loop(function () {
@@ -206,7 +206,7 @@ S.UI = (function () {
         default:
           S.Shape.switchShape(S.ShapeBuilder.letter(current[0] === cmd ? 'What?' : current));
       }
-    }, 2000, sequence.length);
+    }, 3000, sequence.length);
   }
 
   function checkInputWidth(e) {
@@ -377,7 +377,7 @@ S.Dot = function (x, y) {
   this.e = 0.07;
   this.s = true;
 
-  this.c = new S.Color(255, 255, 255, this.p.a);
+  this.c = new S.Color(0,255,255, this.p.a);
 
   this.t = this.clone();
   this.q = [];
